@@ -21,6 +21,8 @@ Test: Pictures are resized to 32x32, then they are normalized locally. Single im
 * SPP net
 Instead of spp, I use global average pooling.
 
+* Learning rate schedule
+Learning rate is divided by 10 at [150, 225] epoch. The total number of epochs is 300.
 
 # Cifar10 result
 | network                                                   | total accuracy (%) |
