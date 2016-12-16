@@ -41,9 +41,10 @@ class Conv_PReLU(nutszebra_chainer.Model):
 
 class Triple_FC(nutszebra_chainer.Model):
 
-    def __init__(self, in_channel, out_channels=(4096, 4096, 10), init=0.25):
+    def __init__(self, in_channel, out_channels=(4096, 4096, 10), init=0.25, dropout_ratio=0.5):
         self.in_channel = in_channel
         self.out_channels = out_channels
+        self.droput_ratio = dropout_ratio
         super(Triple_FC, self).__init__()
         modules = []
         for i, out_channel in enumerate(out_channels):
@@ -72,8 +73,11 @@ class Triple_FC(nutszebra_chainer.Model):
                 self[name].b.data = self.bias_initialization(self[name], constant=0)
 
     def __call__(self, x):
-        for name, link in self.modules:
-            x = self[name](x)
+        for i in six.moves.range(len(self.out_channels)):
+            if i <= (len(self.out_channels) - 1):
+                x = F.dropout(x, ratio=self.droput_ratio)
+            x = self['fc{}'.format(i)](x)
+            x = self['prelu{}'.format(i)](x)
         return x
 
 
