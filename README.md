@@ -15,8 +15,8 @@ Implementation of PReLUNet by chainer
 All hyperparameters and network architecture are the same as in [[1]][Paper] except for some parts.
 
 * Data augmentation  
-Train: Pictures are randomly resized in the range of [32, 36], then 32x32 patches are extracted randomly and are normalized locally. Horizontal flipping is applied with 0.5 probability.  
-Test: Pictures are resized to 32x32, then they are normalized locally. Single image test is used to calculate total accuracy.  
+Train: Pictures are randomly resized in the range of [256, 512], then 224x224 patches are extracted randomly and are normalized locally. Horizontal flipping is applied with 0.5 probability.  
+Test: Pictures are resized to 384x384, then they are normalized locally. Single image test is used to calculate total accuracy.  
 
 * SPP net
 Instead of spp, I use global average pooling.
