@@ -27,7 +27,7 @@ Learning rate is divided by 10 at [150, 225] epoch. The total number of epochs i
 # Cifar10 result
 | network                                                   | total accuracy (%) |
 |:----------------------------------------------------------|-------------------:|
-| my implementation(model A)                                | soon               |
+| my implementation(model A)                                | 94.98              |
 
 <img src="https://github.com/nutszebra/prelu_net/blob/master/img/loss.jpg" alt="loss" title="loss">
 <img src="https://github.com/nutszebra/prelu_net/blob/master/img/accuracy.jpg" alt="total accuracy" title="total accuracy">
