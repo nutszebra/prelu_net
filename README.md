@@ -29,8 +29,8 @@ Learning rate is divided by 10 at [150, 225] epoch. The total number of epochs i
 |:----------------------------------------------------------|-------------------:|
 | my implementation(model A)                                | 94.98              |
 
-<img src="https://github.com/nutszebra/prelu_net/blob/master/img/loss.jpg" alt="loss" title="loss">
-<img src="https://github.com/nutszebra/prelu_net/blob/master/img/accuracy.jpg" alt="total accuracy" title="total accuracy">
+<img src="https://github.com/nutszebra/prelu_net/blob/master/loss.jpg" alt="loss" title="loss">
+<img src="https://github.com/nutszebra/prelu_net/blob/master/accuracy.jpg" alt="total accuracy" title="total accuracy">
 
 # References
 Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification [[1]][Paper]  
